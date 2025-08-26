@@ -1,7 +1,7 @@
 
 import { motion } from "motion/react";
-import { TbMail, TbRoute } from "react-icons/tb";
-import MailButton from "./mail-button";
+import {  TbRoute } from "react-icons/tb";
+import ContactMenu from "./contact";
 
 export default function NavBar() {
   return (
@@ -19,9 +19,12 @@ export default function NavBar() {
           <a href="#how" className="hover:text-white">How it works</a>
           <a href="#contact" className="hover:text-white">Contact</a>
         </nav>
-        <MailButton subject="Plan my trip with SJ Travels">
-          <TbMail className="h-4 w-4" /> Contact
-        </MailButton>
+      <ContactMenu
+          email="support@sjtravels.in"
+          phone="+91-9165501234"
+          subject="Plan my trip with SJ Travels"
+          body={`Hi SJ Travels,%0A%0AI want help planning a trip.%0A%0ADestination(s):%0ADates:%0ABudget:%0ATravellers:%0APreferences:%0A%0ARegards,`}
+        />
       </div>
     </div>
   );
